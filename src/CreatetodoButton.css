@@ -1,0 +1,12 @@
+.CreatetodoButton{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    color: white;
+    background-color: #6499DE;
+}
+.CreatetodoButton:hover{
+    cursor: pointer;
+    background-color: #62C8F5;
+}

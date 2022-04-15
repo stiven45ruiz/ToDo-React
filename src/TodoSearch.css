@@ -1,0 +1,9 @@
+.todoSearch{
+    text-align: center;
+    height: 25px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    background-color: #ABC3E3;
+    color: white;
+}

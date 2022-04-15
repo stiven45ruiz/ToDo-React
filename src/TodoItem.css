@@ -1,0 +1,12 @@
+.TodoItem{
+    margin: 20px 0;
+    padding: 15px;
+    border: solid 1px #4D76AB;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.TodoItem:hover{
+    cursor: pointer;
+}

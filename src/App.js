@@ -1,4 +1,10 @@
 import React from "react";
+
+import { TodoCounter } from "./TodoCounter";
+import { TodoSearch } from "./TodoSearch";
+import { TodoItem } from "./TodoItem";
+import { TodoList } from "./TodoList";
+import { CreatetodoButton } from "./CreatetodoButton";
 //import logo from './logo.svg';
 //import './App.css';
 
@@ -11,17 +17,14 @@ const todos = [
 function App() {
   return (
     <React.Fragment>
-      {/*<TodoCounter/>*/}
-      <h2>Has completado 2 de 3 TODOs</h2>
-      {/* <TodoSearch/> */}
-      <input placeholder="Cebolla"/>
-      {/* <TodoList>
+      <TodoCounter/>
+      <TodoSearch/>
+      <TodoList>
         {todos.map(todo => (
-          <todoItem/>
+          <TodoItem key={todo.text} text={todo.text}/>
         ))}
-      </TodoList> */}
-      {/* <CreatetodoButton/> */}
-      <button>+</button>
+      </TodoList>
+      <CreatetodoButton/>
     </React.Fragment>
   );
 }
