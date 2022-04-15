@@ -5,8 +5,12 @@
     border: none;
     color: white;
     background-color: #6499DE;
+
+    transform: rotate(0);
+    transition: .3s ease;
 }
 .CreatetodoButton:hover{
     cursor: pointer;
+    transform: rotate(230deg);
     background-color: #62C8F5;
 }

@@ -10,8 +10,7 @@ function TodoItem(props){
             <p className={`TodoItem-p ${props.completed && 'TodoItem-p--complete'}`}>
                 {props.text}
             </p>
-            <span>x</span>
-            <span className="material-icons-outlined">delete</span>
+            <span className="Icon Icon-delete">x</span>
         </li>
     );
 }
