@@ -22,17 +22,16 @@ function App() {
   const [todos, setTodos] = React.useState(defaultTodos); 
   //Para que se puesdan cambiar los estados de los todos
   //siendo igual a default todos-
-  
   const [searchValue, setSearchValue] = React.useState('');
   ///Lama al estado de search input
 
+
   const completedTodos = todos.filter(todo => !!todo.completed).length;
   //Cada ves que Se complete un todo,se hace de nuevo el filtro y se cuenta
-  
   const totalTodos = todos.length;//total de todos
 
-  let searchedTodo = [];
 
+  let searchedTodo = [];
   ///Busca y filtra todos
   if (!searchValue.length >= 1){
     searchedTodo = todos; //Si comple, muestra la lista por defectos
@@ -44,6 +43,25 @@ function App() {
     });
     
   }
+
+
+  const completeTodo = (text) =>{//Recube el texto del todo
+    const todoIndex = todos.findIndex(todo => todo.text === text); //examina que todos coninciden el texto enviado
+    const newTodos = [...todos];//clona los todos
+    newTodos[todoIndex].completed = true//asigna true a la propiedad complete del array todos
+    setTodos(newTodos); //actualiza el estado para volver a renderizar
+
+    // todos[todoIndex] = {
+    //   text: todos[todoIndex].text,
+    //   completed: true,
+    // }
+  }
+  const deleteTodo = (text) =>{//Recube el texto del todo
+    const todoIndex = todos.findIndex(todo => todo.text === text); //examina que todos coninciden el texto enviado
+    const newTodos = [...todos];//clona los todos
+    newTodos.splice(todoIndex, 1);
+    setTodos(newTodos); //actualiza el estado para volver a renderizar
+  };
 
   return (
     <React.Fragment>
@@ -60,7 +78,10 @@ function App() {
           <TodoItem 
             key={todo.text} 
             text={todo.text}
-            completed={todo.completed}/>
+            completed={todo.completed}
+            onComplete={()=> completeTodo(todo.text)}
+            onDelete={()=> deleteTodo(todo.text)}
+          />
         ))}
       </TodoList>
       <CreatetodoButton/>
