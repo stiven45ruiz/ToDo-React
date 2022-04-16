@@ -19,21 +19,28 @@ const defaultTodos = [
 
 function App() {
 
-  const [todos, setTodos] = React.useState(defaultTodos);
+  const [todos, setTodos] = React.useState(defaultTodos); 
+  //Para que se puesdan cambiar los estados de los todos
+  //siendo igual a default todos-
+  
   const [searchValue, setSearchValue] = React.useState('');
+  ///Lama al estado de search input
 
   const completedTodos = todos.filter(todo => !!todo.completed).length;
-  const totalTodos = todos.length;
+  //Cada ves que Se complete un todo,se hace de nuevo el filtro y se cuenta
+  
+  const totalTodos = todos.length;//total de todos
 
   let searchedTodo = [];
 
+  ///Busca y filtra todos
   if (!searchValue.length >= 1){
-    searchedTodo = todos;
+    searchedTodo = todos; //Si comple, muestra la lista por defectos
   }else {
-    searchedTodo = todos.filter(todo=>{
-      const todoText = todo.text.toLowerCase();
-      const searchText = searchValue.toLowerCase();
-      return todoText.includes(searchText);
+    searchedTodo = todos.filter(todo=>{//llama al aray de todos
+      const todoText = todo.text.toLowerCase();//combierte texto del array a minusculas
+      const searchText = searchValue.toLowerCase();//combierte texto del input a minusculas
+      return todoText.includes(searchText);//retorna los array que uncluyyen lo que se escribio en el input
     });
     
   }
@@ -41,12 +48,12 @@ function App() {
   return (
     <React.Fragment>
       <TodoCounter
-        total={totalTodos}
-        completed={completedTodos}
+        total={totalTodos}//cada ves que cambie cualquier estado, nos envia a totalTodos
+        completed={completedTodos}//Nos envia las info de todos completados
       />
       <TodoSearch
-        searchValue={searchValue}
-        setSearchValue={setSearchValue}
+        searchValue={searchValue}//Es igaula al valor
+        setSearchValue={setSearchValue}// es igual a la función
       />
       <TodoList>
         {searchedTodo.map(todo => (

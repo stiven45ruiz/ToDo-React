@@ -10,10 +10,10 @@ function TodoSearch({searchValue, setSearchValue}){
 
     return(
         <input 
+            key={onSearchValueChange}
             className="todoSearch" 
             placeholder="Cebolla"
             value={searchValue}
-            key={onSearchValueChange}
             onChange={onSearchValueChange}
         />
     )
