@@ -6,8 +6,10 @@
     color: white;
     background-color: #6499DE;
 
+    position: fixed;
     transform: rotate(0);
     transition: .3s ease;
+    z-index: 1;
 }
 .CreatetodoButton:hover{
     cursor: pointer;
