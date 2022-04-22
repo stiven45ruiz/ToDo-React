@@ -5,13 +5,18 @@ import './TodoCounter.css'
 function TodoCounter(){
 
     const {totalTodos, completedTodos} = React.useContext(TodoContext);
-    return(
+    return[
+        <h2 
+            className="greetings"
+        >
+            What's up
+        </h2>,
         <h3 
             className="TodoCounter"
         >
-            Haz completado {completedTodos} de {totalTodos} TODOs
+            You have completed {completedTodos} of {totalTodos} TODOs
         </h3>
-    );
+    ];
 };
 
 export {TodoCounter};

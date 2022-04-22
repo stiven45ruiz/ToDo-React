@@ -1,0 +1,27 @@
+.modalform{
+    margin: 100px 0 0 0;
+    height: 150px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 3px 3px 0.4em #8fc5ff86, -3px -3px 0.4em #8fc5ff86;
+    background-color: #2A415E;
+}
+.modalform__input{
+    width: 240px;
+    height: 50px;
+    margin: 0 auto; 
+    border-radius: 5px;
+}
+.modalform__buttons > button{
+    background-color: #6499DE;
+    color: white;
+    border: none;
+    width: 90px;
+    height: 25px;
+    margin: 10px;
+    border-radius: 5px;
+}
