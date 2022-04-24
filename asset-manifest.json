@@ -1,13 +1,13 @@
 {
-  "main.css": "/stiven45ruiz/ToDo-React/static/css/main.947e2aa2.chunk.css",
-  "main.js": "/stiven45ruiz/ToDo-React/static/js/main.daf466ef.chunk.js",
-  "main.js.map": "/stiven45ruiz/ToDo-React/static/js/main.daf466ef.chunk.js.map",
-  "static/js/1.1d9d3bc0.chunk.js": "/stiven45ruiz/ToDo-React/static/js/1.1d9d3bc0.chunk.js",
-  "static/js/1.1d9d3bc0.chunk.js.map": "/stiven45ruiz/ToDo-React/static/js/1.1d9d3bc0.chunk.js.map",
-  "runtime~main.js": "/stiven45ruiz/ToDo-React/static/js/runtime~main.2ed4de24.js",
-  "runtime~main.js.map": "/stiven45ruiz/ToDo-React/static/js/runtime~main.2ed4de24.js.map",
-  "static/css/main.947e2aa2.chunk.css.map": "/stiven45ruiz/ToDo-React/static/css/main.947e2aa2.chunk.css.map",
-  "index.html": "/stiven45ruiz/ToDo-React/index.html",
-  "precache-manifest.b9a4dc4a340cedb30610a8fadd73c815.js": "/stiven45ruiz/ToDo-React/precache-manifest.b9a4dc4a340cedb30610a8fadd73c815.js",
-  "service-worker.js": "/stiven45ruiz/ToDo-React/service-worker.js"
+  "files": {
+    "main.css": "/stiven45ruiz/ToDo-React/static/css/main.c34d3699.css",
+    "main.js": "/stiven45ruiz/ToDo-React/static/js/main.e1ff0f12.js",
+    "index.html": "/stiven45ruiz/ToDo-React/index.html",
+    "main.c34d3699.css.map": "/stiven45ruiz/ToDo-React/static/css/main.c34d3699.css.map",
+    "main.e1ff0f12.js.map": "/stiven45ruiz/ToDo-React/static/js/main.e1ff0f12.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c34d3699.css",
+    "static/js/main.e1ff0f12.js"
+  ]
 }
