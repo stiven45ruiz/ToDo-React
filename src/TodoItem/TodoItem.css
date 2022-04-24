@@ -40,6 +40,10 @@
   position: absolute;
   left: 12px;
 }
+.Icon-check:hover{
+  
+  animation: myAnimIconCheck 2s ease 0s infinite alternate both;
+}
 .Icon-check--active {
   color: #4caf50;
 }
@@ -49,5 +53,46 @@
   right: 0;
 }
 .Icon-delete:hover {
-  color: red;
+  color: rgb(253, 68, 68);
+  animation: myAnimIconDelete 2s ease 0s infinite normal both;
+}
+
+@keyframes myAnimIconCheck {
+	0%,
+	100% {
+		transform: translateX(0%);
+		transform-origin: 50% 50%;
+	}
+
+	15% {
+		transform: translateY(-7px) rotate(-4deg);
+	}
+
+	45% {
+		transform: translateY(-5px) rotate(-3.6deg);
+	}
+
+	75% {
+		transform: translateY(-3px) rotate(-1.2deg);
+	}
+}
+
+@keyframes myAnimIconDelete {
+	0%,
+	100% {
+		transform: translateX(0%);
+		transform-origin: 50% 50%;
+	}
+
+	15% {
+		transform:  rotate(90deg);
+	}
+
+	45% {
+		transform:  rotate(-90.6deg);
+	}
+
+	75% {
+		transform:  rotate(-30deg);
+	}
 }

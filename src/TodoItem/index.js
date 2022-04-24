@@ -13,8 +13,16 @@ function TodoItem(props){
                 className={`Icon Icon-check ${props.completed && 'Icon-check--active'}`}
                 onClick={props.onComplete}
             >
-                √
+                <ion-icon 
+                    size="large" 
+                    name="checkbox-outline"
+                >
+                </ion-icon>
             </span>
+    
+            
+            
+
             <p className={`TodoItem-p ${props.completed && 'TodoItem-p--complete'}`}>
                 {props.text}
             </p>
@@ -22,7 +30,7 @@ function TodoItem(props){
                 className="Icon Icon-delete"
                 onClick={props.onDelete}
             >
-                x
+                <ion-icon size="large" name="close-circle"></ion-icon>
             </span>
         </li>
     );

@@ -1,0 +1,14 @@
+.FooterText{
+    position: absolute;
+    bottom: 30px;
+    font-size: 18px;
+    color: white;
+    text-align: center;
+}
+.FooterText > a{
+    text-decoration: none;
+    color: #6499DE;
+}
+.FooterText > a:hover{
+    color: #62C8F5;
+}

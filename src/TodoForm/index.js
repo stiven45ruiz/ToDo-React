@@ -28,7 +28,7 @@ function TodoForm(){
                 className="modalform__input"
                 value={newTodoValue}
                 onChange={onChangeArea}
-                placeholder='Cortar cebolla'
+                placeholder='E.g: Meet with the team at 9am'
             />
             <div 
                 className="modalform__buttons"
@@ -37,12 +37,12 @@ function TodoForm(){
                 type="button"
                     onClick={onCancel}
                 >
-                    Cancelar
+                    Cancel
                 </button>
                 <button
                 type="submit"
                 >
-                    Añadir
+                    Add
                 </button>
             </div>
         </form>

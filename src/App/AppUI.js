@@ -6,9 +6,12 @@ import { TodoList } from '../TodoList';
 import { TodoItem } from '../TodoItem';
 import {TodoForm} from '../TodoForm'
 import { CreateTodoButton } from '../CreateTodoButton';
-
+import {LoadingSkeleton} from '../Skeleton/LoadingSkeleton'
+import {CreateLastTodo} from '../Skeleton/CreateLastTodo'
+import {Footer} from '../Footer'
 
 import { Modal } from '../modal';
+
 
 function AppUI() {
   const {
@@ -18,7 +21,8 @@ function AppUI() {
     completeTodo,
     deleteTodo,
     openModal,
-    setOpenModal 
+    setOpenModal,
+
   } = React.useContext(TodoContext);
 
   return (
@@ -28,8 +32,8 @@ function AppUI() {
  
       <TodoList>
         {error && <p>Desespérate, hubo un error...</p>}
-        {loading && <p>Estamos cargando, no desesperes...</p>}
-        {(!loading && !searchedTodos.length) && <p>¡Crea tu primer TODO!</p>}
+        {loading && new Array(3).fill(1).map((a, i) => <LoadingSkeleton key={i}/>)}
+        {(!loading && !searchedTodos.length) && <CreateLastTodo/>}
         
         {searchedTodos.map(todo => (
           <TodoItem
@@ -51,6 +55,8 @@ function AppUI() {
       <CreateTodoButton 
         setOpenModal={setOpenModal}
       />
+
+      <Footer/>
     </React.Fragment>
   );
 }
