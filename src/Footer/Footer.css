@@ -1,6 +1,7 @@
 .FooterText{
-    position: absolute;
-    bottom: 30px;
+    position: relative;
+    margin-top: 60px;
+    bottom: 10px;
     font-size: 18px;
     color: white;
     text-align: center;
