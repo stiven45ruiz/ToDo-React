@@ -5,9 +5,10 @@ import { TodoSearch } from '../TodoSearch';
 import { TodoList } from '../TodoList';
 import { TodoItem } from '../TodoItem';
 import {TodoForm} from '../TodoForm'
-import { CreateTodoButton } from '../CreateTodoButton';
-import {LoadingSkeleton} from '../Skeleton/LoadingSkeleton'
-import {CreateLastTodo} from '../Skeleton/CreateLastTodo'
+import {CreateTodoButton } from '../CreateTodoButton';
+import {LoadingSkeleton} from '../Skeleton/LoadingSkeleton';
+import {NotResults} from "../Skeleton/NotResults";
+import {CreateLastTodo} from '../Skeleton/CreateLastTodo';
 import {Footer} from '../Footer'
 
 import { Modal } from '../modal';
@@ -33,6 +34,7 @@ function AppUI() {
       <TodoList>
         {error && <p>Desespérate, hubo un error...</p>}
         {loading && new Array(3).fill(1).map((a, i) => <LoadingSkeleton key={i}/>)}
+        {(!loading && !searchedTodos.length) && <NotResults/>}
         {(!loading && !searchedTodos.length) && <CreateLastTodo/>}
         
         {searchedTodos.map(todo => (
