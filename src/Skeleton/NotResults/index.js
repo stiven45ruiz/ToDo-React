@@ -1,13 +1,13 @@
 import React from "react";
 import './NotResults.css'
 
-function NotResults(){
+function NotResults(props){
     
     return(
         <li>
             
             <p>
-               no results
+               no results for {props.searchText}
             </p>
             
         </li>
