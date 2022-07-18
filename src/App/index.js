@@ -1,6 +1,7 @@
 import React from 'react';
 import {useTodos} from './useTodos'
 
+import { Header } from '../Header';
 import { TodoCounter } from '../TodoCounter';
 import { TodoSearch } from '../TodoSearch';
 import { TodoList } from '../TodoList';
@@ -12,6 +13,9 @@ import { NotResults } from "../Skeleton/NotResults";
 import { CreateLastTodo } from '../Skeleton/CreateLastTodo';
 import { Footer } from '../Footer'
 import { Modal } from '../modal';
+import { ChangeAlert } from '../ChangeAlert';
+
+
 
 // const defaultTodos = [
 //   { text: 'Cortar cebolla', completed: true },
@@ -35,19 +39,27 @@ function App() {
     searchValue, 
     setSearchValue,
     addTodo,
+    sincronizeTodos,
 
   } = useTodos();
   
   return (
     <React.Fragment>
-      <TodoCounter 
-        totalTodos={totalTodos}
-        completedTodos={completedTodos}
-      />
-      <TodoSearch
-        searchValue={searchValue}
-        setSearchValue={setSearchValue}
-      />
+
+      <Header
+        loading={loading}
+      >
+        <TodoCounter 
+          totalTodos={totalTodos}
+          completedTodos={completedTodos}
+          // loading={loading}
+        />
+        <TodoSearch
+          searchValue={searchValue}
+          setSearchValue={setSearchValue}
+          // loading={loading}
+        />
+      </Header>
 
       <TodoList
         error={error}
@@ -105,7 +117,11 @@ function App() {
         openModal={openModal}
       />
 
+      <ChangeAlert
+        sincronize={sincronizeTodos}
+      />
       <Footer/>
+      
     </React.Fragment>
   );
 }

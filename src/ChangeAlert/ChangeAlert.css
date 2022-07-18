@@ -1,0 +1,23 @@
+.alert{
+  margin: 20px 0;
+  width: 260px;
+  padding: 20px;
+  text-align: center;
+  border: solid 1px rgb(245, 139, 139);
+  border-radius: 10px;
+  background-color: #fcfcfc15;
+}
+.alert__text{
+  color: antiquewhite;
+}
+.alert__button{
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #6499DE;
+}
+
+.alert__button:hover{
+  cursor: pointer;
+  background-color: #62C8F5;
+}

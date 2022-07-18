@@ -7,3 +7,7 @@
     background-color: #ABC3E3;
     color: white;
 }
+
+.todoSearch:disabled{
+    opacity: 50%;
+}

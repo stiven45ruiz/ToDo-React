@@ -15,7 +15,7 @@ function TodoList(props){
       {(!!props.totalTodos && !props.searchedTodos.length) && props.onEmotySearchReslts(props.searchValue)}
 
 
-      {props.searchedTodos.map(renderFunc)}
+      {!props.loading && props.searchedTodos.map(renderFunc)}
 
 
       {/* {props.children} */}
